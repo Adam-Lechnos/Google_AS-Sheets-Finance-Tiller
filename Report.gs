@@ -68,13 +68,12 @@ function sendEmailBudgetReportArgs(monthName) {
 -----------------------------------------------------------------------
   * Total Spending Allowance  --  $${budgetRemainingValue} / $${budgetAllocatedValue}     ${budgetAllocOOB}
 -----------------------------------------------------------------------
-     * Restuarant                        --- $${budgetRemRestValue} / $${budgetAllocRestValue}   ${budgetRestOOB}
+     * Restuarants                       --- $${budgetRemRestValue} / $${budgetAllocRestValue}   ${budgetRestOOB}
      * Coffee & Snacks               --- $${budgetRemCSValue} / $${budgetAllocCSValue}   ${budgetCSOOB}
      * Reimbursable Meals         --- $${budgetRemRMValue} / $${budgetAllocRMValue}   ${budgetRMOOB}
-     * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue}   ${budgetCHOOB}
-     * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue}   ${budgetGrocOOB}
-     * Vehicle Wash                    --- $${budgetRemCWValue} / $${budgetAllocCWValue}   ${budgetCWOOB}
      * Recreation/Entertainment --- $${budgetRemREValue} / $${budgetAllocREValue}   ${budgetREOOB}
+     * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue}   ${budgetGrocOOB}
+     * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue}   ${budgetCHOOB}
 ------------------------------------------------------------------------
 x - out of budget or overspent
 y - never allocated but impacts totals
