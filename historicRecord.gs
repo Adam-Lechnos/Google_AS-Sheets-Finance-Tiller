@@ -9,7 +9,7 @@ function populateHistoricRecord() {
   var numTotalAll = sheetCurrMonthSpend.getRange('B11').getValue();
   var numTotalUsed = sheetCurrMonthSpend.getRange('C11').getValue();
   var numTotalRem = sheetCurrMonthSpend.getRange('D11').getValue();
-  var spendWarn = sheetCurrMonthSpend.getRange('B21').getValue();
+  var spendWarn = sheetCurrMonthSpend.getRange('B36').getValue();
   var spendWarnLimit = sheetCurrMonthSpend.getRange('D21').getValue();
   
   sheetHistoricData.appendRow([dateRecord,spendAllMonth,spendAllYear,numTotalAll,numTotalUsed,numTotalRem,spendWarn,spendWarnLimit]);
