@@ -68,15 +68,15 @@ function sendEmailBudgetReportArgs(monthName) {
 -----------------------------------------------------------------------
   * Total Spending Allowance  --  $${budgetRemainingValue} / $${budgetAllocatedValue}     ${budgetAllocOOB}
 -----------------------------------------------------------------------
-     * Restuarants                       --- $${budgetRemRestValue} / $${budgetAllocRestValue}   ${budgetRestOOB}
+     * Restuarants                      --- $${budgetRemRestValue} / $${budgetAllocRestValue}   ${budgetRestOOB}
      * Coffee & Snacks               --- $${budgetRemCSValue} / $${budgetAllocCSValue}   ${budgetCSOOB}
      * Reimbursable Meals         --- $${budgetRemRMValue} / $${budgetAllocRMValue}   ${budgetRMOOB}
      * Recreation/Entertainment --- $${budgetRemREValue} / $${budgetAllocREValue}   ${budgetREOOB}
      * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue}   ${budgetGrocOOB}
      * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue}   ${budgetCHOOB}
 ------------------------------------------------------------------------
-x - out of budget or overspent
-y - never allocated but impacts totals
+x - Out of budget or overspent
+y - Effects remaining 'Total Spending Allowance' and never allocated
   
 Detailed report: https://docs.google.com/spreadsheets/d/1NJYEI72r9MGutftoybLrUrDk49mVxeTJcWrQngZ3tho/edit#gid=469816328
 ${additionalMessage}`; // Second column
