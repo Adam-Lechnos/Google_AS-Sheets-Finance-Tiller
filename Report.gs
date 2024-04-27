@@ -4,13 +4,16 @@ function sendEmailBudgetReport(){
 
 
 
-function sendEmailBudgetReportArgs(monthName) {
+function sendEmailBudgetReportArgs(monthName, spendWarn, spendWarnTh) {
 
     if (monthName === ""){
       monthName = ""
       isEOMonthReport = ""
+      spendWarnMessage = ""
     } else {
       isEOMonthReport = "Monthly "
+      if (spendWarn) {spendWarn='Yes'} else {spendWarn='No'}
+      spendWarnMessage = `Spend Warn Activated: ${spendWarn} (spend threshold within 50% month set to ${spendWarnTh*100}%)`
       additionalMessage = `
   ** Monthly Status reports are sent month ends **`
     }
@@ -77,6 +80,8 @@ function sendEmailBudgetReportArgs(monthName) {
 ------------------------------------------------------------------------
 x - Out of budget or overspent
 y - Effects remaining 'Total Spending Allowance' and never allocated
+
+${spendWarnMessage}
   
 Detailed report: https://docs.google.com/spreadsheets/d/1NJYEI72r9MGutftoybLrUrDk49mVxeTJcWrQngZ3tho/edit#gid=469816328
 ${additionalMessage}`; // Second column
