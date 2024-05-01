@@ -23,6 +23,7 @@ Automation for Tiller Money spreadsheets created in Google Sheets, for budget mo
 | sendEmailBudgetReportEOMonth | Time-driven | Month timer - 29th | 6pm to 7pm | Daily |
 | sendEmailBudgetReportEOMonth | Time-driven | Month timer - 30th | 6pm to 7pm | Daily |
 | sendEmailBudgetReportEOMonth | Time-driven | Month timer - 31st | 6pm to 7pm | Daily |
+| warnStatusHalfMonthSpendSnapShot | Time-driven | Month timer - 14th | 4pm to 5pm | Daily |
 
 *\*Day of the month if `Month timer` is selected or Day of Week if `Week timer` is selected* \
 *\^Event type if `From spreadsheet` is selected*
