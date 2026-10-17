@@ -11,7 +11,7 @@ function sendEmailAlert() {
   
     // Send Alert Email.
     var message = `${spendLimit}% or more of your monthly budget has been spent within the first 50% of the current month. Monitor your spend for the current month: https://docs.google.com/spreadsheets/d/1NJYEI72r9MGutftoybLrUrDk49mVxeTJcWrQngZ3tho/edit#gid=469816328`; // Second column
-    var subject = 'Monthly Spending Allowance Warning!!';
+    var subject = 'Monthly Spending Allowance Warning!! - Adam';
     MailApp.sendEmail(emailAddress, subject, message);
     }
 }

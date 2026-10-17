@@ -82,15 +82,17 @@ function sendEmailBudgetReportArgs(monthName, spendWarn, spendWarnTh) {
      * Reimbursable Meals         --- $${budgetRemRMValue} / $${budgetAllocRMValue} / ${catReMeal}   ${budgetRMOOB}
      * Recreation/Entertainment --- $${budgetRemREValue} / $${budgetAllocREValue} / ${catRec}   ${budgetREOOB}
      * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue} / ${catGroc}   ${budgetGrocOOB}
+     * Crafts and Other Hobbies --- $${budgetRemCWValue} / $${budgetAllocCWValue} / ${catArt}   ${budgetCWOOB}
      * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue} / n/a   ${budgetCHOOB}
 ---------------------------------------------------------------------------------------
 x - Out of budget or overspent
 y - Effects remaining 'Total Spending Allowance' and never allocated
+Joint = true - Tracked jointly and not as an individual expense
 
 ${spendWarnMessage}
   
 Detailed report: https://docs.google.com/spreadsheets/d/1NJYEI72r9MGutftoybLrUrDk49mVxeTJcWrQngZ3tho/edit#gid=469816328
 ${additionalMessage}`; // Second column
-  var subject = `${monthName}${isEOMonthReport}Budget Status Report`;
+  var subject = `${monthName}${isEOMonthReport}Budget Status Report - Adam`;
   MailApp.sendEmail(emailAddress, subject, message);
 }
