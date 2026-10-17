@@ -58,6 +58,12 @@ function sendEmailBudgetReportArgs(monthName, spendWarn, spendWarnTh) {
   var budgetGrocOOB = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("C28").getValue();
   var budgetCWOOB = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("C29").getValue();
   var budgetREOOB = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("C30").getValue();
+  var catRest = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("E4").getValue();
+  var catCoff = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("E5").getValue();
+  var catGroc = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("E6").getValue();
+  var catArt = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("E7").getValue();
+  var catReMeal = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("E8").getValue();
+  var catRec = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Current Month's Spending Allowance").getRange("E9").getValue();
   var additionalMessage = ""
 
   // Fetch the email address
@@ -68,16 +74,16 @@ function sendEmailBudgetReportArgs(monthName, spendWarn, spendWarnTh) {
 
   // Send Alert Email.
   var message = `${monthName}${isEOMonthReport}Budget status (remaining / allocated) as of ${currentDate}:
------------------------------------------------------------------------
-  * Total Spending Allowance  --  $${budgetRemainingValue} / $${budgetAllocatedValue}     ${budgetAllocOOB}
------------------------------------------------------------------------
-     * Restuarants                      --- $${budgetRemRestValue} / $${budgetAllocRestValue}   ${budgetRestOOB}
-     * Coffee & Snacks               --- $${budgetRemCSValue} / $${budgetAllocCSValue}   ${budgetCSOOB}
-     * Reimbursable Meals         --- $${budgetRemRMValue} / $${budgetAllocRMValue}   ${budgetRMOOB}
-     * Recreation/Entertainment --- $${budgetRemREValue} / $${budgetAllocREValue}   ${budgetREOOB}
-     * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue}   ${budgetGrocOOB}
-     * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue}   ${budgetCHOOB}
-------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+  * Total Spending Allowance  --  $${budgetRemainingValue} / $${budgetAllocatedValue} / Joint     ${budgetAllocOOB} 
+---------------------------------------------------------------------------------------
+     * Restaurants                      --- $${budgetRemRestValue} / $${budgetAllocRestValue} / ${catRest}    ${budgetRestOOB}
+     * Coffee & Snacks               --- $${budgetRemCSValue} / $${budgetAllocCSValue} / ${catCoff}   ${budgetCSOOB}
+     * Reimbursable Meals         --- $${budgetRemRMValue} / $${budgetAllocRMValue} / ${catReMeal}   ${budgetRMOOB}
+     * Recreation/Entertainment --- $${budgetRemREValue} / $${budgetAllocREValue} / ${catRec}   ${budgetREOOB}
+     * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue} / ${catGroc}   ${budgetGrocOOB}
+     * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue} / n/a   ${budgetCHOOB}
+---------------------------------------------------------------------------------------
 x - Out of budget or overspent
 y - Effects remaining 'Total Spending Allowance' and never allocated
 
