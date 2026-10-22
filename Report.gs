@@ -74,17 +74,17 @@ function sendEmailBudgetReportArgs(monthName, spendWarn, spendWarnTh) {
 
   // Send Alert Email.
   var message = `${monthName}${isEOMonthReport}Budget status (remaining / allocated) as of ${currentDate}:
----------------------------------------------------------------------------------------
-  * Total Spending Allowance  --  $${budgetRemainingValue} / $${budgetAllocatedValue} / Joint     ${budgetAllocOOB} 
----------------------------------------------------------------------------------------
-     * Restaurants                      --- $${budgetRemRestValue} / $${budgetAllocRestValue} / ${catRest}    ${budgetRestOOB}
-     * Coffee & Snacks               --- $${budgetRemCSValue} / $${budgetAllocCSValue} / ${catCoff}   ${budgetCSOOB}
-     * Reimbursable Meals         --- $${budgetRemRMValue} / $${budgetAllocRMValue} / ${catReMeal}   ${budgetRMOOB}
-     * Recreation/Entertainment --- $${budgetRemREValue} / $${budgetAllocREValue} / ${catRec}   ${budgetREOOB}
-     * Groceries                          --- $${budgetRemGrocValue} / $${budgetAllocGrocValue} / ${catGroc}   ${budgetGrocOOB}
-     * Crafts and Other Hobbies --- $${budgetRemCWValue} / $${budgetAllocCWValue} / ${catArt}   ${budgetCWOOB}
-     * Cash in Hand                    --- $${budgetRemCHValue} / $${budgetAllocCHValue} / n/a   ${budgetCHOOB}
----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+* Tot Spend Alw -- $${budgetRemainingValue} / $${budgetAllocatedValue} / Joint  ${budgetAllocOOB} 
+----------------------------------------------------------------------------
+     * Restaurants      --- $${budgetRemRestValue} / $${budgetAllocRestValue} / ${catRest} ${budgetRestOOB}
+     * Coffee & Snacks  --- $${budgetRemCSValue} / $${budgetAllocCSValue} / ${catCoff}  ${budgetCSOOB}
+     * Reimb Meals      --- $${budgetRemRMValue} / $${budgetAllocRMValue} / ${catReMeal}  ${budgetRMOOB}
+     * Rec & Entertain  --- $${budgetRemREValue} / $${budgetAllocREValue} / ${catRec}  ${budgetREOOB}
+     * Groceries        --- $${budgetRemGrocValue} / $${budgetAllocGrocValue} / ${catGroc}  ${budgetGrocOOB}
+     * Crafts & Hobbies --- $${budgetRemCWValue} / $${budgetAllocCWValue} / ${catArt}  ${budgetCWOOB}
+     * Cash in Hand     --- $${budgetRemCHValue} / $${budgetAllocCHValue} / n/a  ${budgetCHOOB}
+---------------------------------------------------------------------------
 x - Out of budget or overspent
 y - Effects remaining 'Total Spending Allowance' and never allocated
 Joint = true - Tracked jointly and not as an individual expense
